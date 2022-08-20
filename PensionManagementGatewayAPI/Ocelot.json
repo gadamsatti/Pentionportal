@@ -1,0 +1,51 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/PensionerDetail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/PensionManagement/PensionerDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/PensionerDetail/{Aadhar}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/PensionManagement/PensionerDetail/{Aadhar}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/ProcessPension",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/PensionManagement/ProcessPension"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Auth",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/PensionManagement/Auth"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:9000"
+  }
+}
